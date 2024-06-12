@@ -134,7 +134,7 @@ class AlgorithmInfo:
 
         temp['matrix'] = result['confus matrix']
 
-        self.data['datasets'][1] = temp
+        self.data['datasets'][2] = temp
 
 
     def loadXGBoost(self):
