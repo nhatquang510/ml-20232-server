@@ -19,7 +19,7 @@ default_data = {
         },
         {
             "label": "Random Forest",
-            "data": [70, 65, 85, 75, 60],
+            "data": [0.65, 0.73, 0.75, 0.73, 0.76],
             "fill": True,
             "backgroundColor": "rgba(255, 99, 132, 0.2)",
             "borderColor": "rgb(255, 99, 132)",
