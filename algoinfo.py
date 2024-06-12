@@ -3,7 +3,7 @@ default_data = {
     "datasets": [
         {
             "label": "Logistic Regression",
-            "data": [65, 59, 90, 81, 56],
+            "data": [0.65, 0.73, 0.75, 0.73, 0.76],
             "fill": True,
             "backgroundColor": "rgba(75, 192, 192, 0.2)",
             "borderColor": "rgb(75, 192, 192)",
@@ -28,9 +28,8 @@ default_data = {
             "pointHoverBackgroundColor": "#fff",
             "pointHoverBorderColor": "rgb(255, 99, 132)",
             "matrix": [
-                [50, 10, 5],
-                [8, 45, 7],
-                [4, 6, 60]
+                [26, 34],
+                [16, 124]
             ]
         },
         {
@@ -123,10 +122,13 @@ class AlgorithmInfo:
 
         self.data['datasets'][0] = temp
 
+    def loadRandomForest(self):
+        pass
+
     def loadKNN(self):
         with open('KNN/KNN_evaluation.json') as json_file:
             result = json.load(json_file)
-        temp = self.data['datasets'][1] # respectively to default data
+        temp = self.data['datasets'][2] # respectively to default data
         temp['data'] = [x for x in result.values()]
         temp['data'].pop()
 
@@ -134,8 +136,6 @@ class AlgorithmInfo:
 
         self.data['datasets'][1] = temp
 
-    def loadRandomForest(self):
-        pass
 
     def loadXGBoost(self):
         with open('XGBoost/XGBoost_evaluation.json') as json_file:
