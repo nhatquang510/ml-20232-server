@@ -44,7 +44,10 @@ class Predict(Resource):
 		model = datamap['model']
 		del datamap['model']
 		user = User(datamap)
-		result = user.predict(model).tolist()[0]
+		prob = user.predict(model).tolist()[0]
+		result = "Bad"
+		if prob == 1:
+			result = "Good"
 		print(result)
 		return result
 
